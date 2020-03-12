@@ -2,5 +2,294 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    overflow-x: hidden;
+
+    /* box-sizing: border-box; */
+}
+/* 
+.container{
+    width: 100vw;
+    height: 100vh;
+    position: relative; 
+    background-color: #060C2D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -2;
+} */
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
 }
 
+h2{
+    color:rgb(252, 147, 243);
+    text-align: center;
+    font-size: 3em;
+    letter-spacing: 2px;
+    margin: 0;
+    font-weight: normal;
+}
+
+/* ############################################### POPUP BUTTON ########################################## */
+/* ############################################### POPUP BUTTON ########################################## */
+
+.buttons-hover > a{
+    display: block;
+    position: relative;
+    font-size: 2em;
+    text-decoration: none;
+    margin: 20px;
+    padding: 10px 30px;
+    color: #fff;
+    text-align: center;
+    background-color: #3f51b5;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    /* z-index: 1; */
+}
+
+.buttons-hover > a:hover{
+    background-color: #E91E63;
+}
+
+.buttons-hover > a::before{
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 100%;
+    height: 100%;
+    background-color: #FFF;
+    z-index: -1;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+
+.buttons-hover > a:hover::before{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.buttons-hover > a::after{
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    transition: 0.3s;
+    transition-delay: 0.3s;
+    z-index: -1;
+}
+
+.buttons-hover > a:hover::after{
+    top: -8px;
+    left: -8px;
+}
+
+
+/* ###################################################### NEON BUTTON ############################################################# */
+/* ###################################################### NEON BUTTON ############################################################# */
+
+.neon{
+    box-sizing: border-box;
+}
+
+.neon > a{
+    color: #21EBFF;
+    font-size: 2em;
+    margin: 30px;
+    padding: 10px 30px;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+    letter-spacing: 2px;
+    overflow: hidden;
+    
+    /* transition-delay: 0.3s; */
+}
+
+.neon > a:hover{
+    background-color: #21EBFF;
+    color: #000;
+    box-shadow: 0px 0px 50px #21EBFF;
+    transition-delay: 0.3s;
+}
+
+.neon > a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid #21EBFF;
+    border-left: 2px solid #21EBFF;
+    transition: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.neon > a:hover::before{
+    height: 100%;
+    width: 100%;
+    transition-delay: 0s;
+}
+
+.neon > a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-bottom: 2px solid #21EBFF;
+    border-right: 2px solid #21EBFF;
+    transition: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.neon > a:hover::after{
+    height: 100%;
+    width: 100%;
+    transition-delay: 0s; 
+}
+
+/* ######################################################## SIDEBAR ####################################################### */
+/* ######################################################## SIDEBAR ####################################################### */
+
+.sidebar-1{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-1 li {
+    list-style: none;
+}
+
+.side-1 > li > a{
+    position: relative;
+    display: block;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    font-size: 3.5em;
+    line-height: 1.2em;
+    font-weight: 900;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.side-1 > li > a::before,
+.side-1 > li > a::after{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+}
+
+.side-1 > li > a:hover{
+    color: #FFF;
+    -webkit-text-stroke: #000;
+    transition: 0.3s;
+}
+
+.side-1 > li > a:hover::before{
+    color: #F00;
+    -webkit-text-stroke: #000;
+    z-index: 1;
+    transform: translate(5px, -5px);
+}
+
+.side-1 > li > a:hover::after{
+    color: #0FF;
+    -webkit-text-stroke: #000;
+    z-index: 2;
+    transform: translate(10px, -10px);
+}
+
+/* ######################################################### SIDEBAR 2 ############################################### */
+/* ######################################################### SIDEBAR 2 ############################################### */
+
+.sidebar-2{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-2 > .side-2 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.sidebar-2 > .side-2 > li{
+    list-style: none;
+}
+
+.sidebar-2 > .side-2 > li > a{
+    font-size: 3em;
+    letter-spacing: 2px;
+    line-height: 1.2em;
+    position: relative;
+    padding: 0px 10px;
+    text-decoration: none;
+    font-weight: 900;
+    color: transparent;
+}
+
+.sidebar-2 > .side-2 > li > a:hover{
+    color: transparent;
+}
+
+.sidebar-2 > .side-2 > li > a::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    -webkit-text-stroke: 1px #EEE;
+    transform: translateX(0);
+    transition: 0.5s;
+    color: transparent;
+}
+
+.sidebar-2 > .side-2 > li > a:hover::before{
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.sidebar-2 > .side-2 > li > a::after{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    -webkit-text-stroke: 1px #EEE;
+    transform: translateX(-100%);
+    transition: 0.5s;
+    opacity: 0;
+    color: #03F4F2;
+}
+
+.sidebar-2 > .side-2 > li > a:hover::after{
+    transform: translateX(0);
+    opacity: 1;
+}
