@@ -20,9 +20,107 @@
         <div class="neon">
             <a href="#">HOVER</a>
         </div>
+        <div class="">
+
+        </div>
     </section>
     
-    <h2>SIDEBAR STYLE 1</h2>
+    <div class="sidebar-1-head">
+        <h2>SIDEBAR STYLE 1</h2>
+        <button class="sidebar-1-btn">Get Code!</button>
+    </div>
+
+    <div class="overlay"> <i class="fa fa-times"></i></div>
+
+    <div class="sidebar-1-code-popup">
+        <div class="html">
+
+
+            <p> HTML <span><button class="copyBtnHTML" data-clipboard-target="#copy-html-text-1"><i class="fa fa-clipboard"></i></button></span></p>
+            <span class="alertHTML">Copied</span>
+<div id="copy-html-text-1" >
+<xmp>
+<section class="sidebar-1">      
+    <ul class="side-1">
+        <li><a href="#" data-text="HOME">HOME</a></li>
+        <li><a href="#" data-text="ABOUT">ABOUT</a></li>
+        <li><a href="#" data-text="SERVICES">SERVICES</a></li>
+        <li><a href="#" data-text="PORTFOLIO">PORTFOLIO</a></li>
+        <li><a href="#" data-text="TEAM">TEAM</a></li>
+        <li><a href="#" data-text="CONTACT">CONTACT</a></li>
+    </ul>
+</section>
+</xmp>
+        
+</div>            
+        </div>
+        <div class="css">
+            <p>CSS <span><button class="copyBtnCSS" data-clipboard-target="#copy-css-text-1"><i class="fa fa-clipboard"></i></button></span></p>
+            <span class="alertCSS">Copied</span>
+   
+<div id="copy-css-text-1">
+<xmp>
+.sidebar-1{
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+}
+                
+.side-1 li {
+    list-style: none;
+}
+                
+.side-1 > li > a{
+    position: relative;
+    display: block;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    font-size: 3.5em;
+    line-height: 1.2em;
+    font-weight: 900;
+     text-decoration: none;
+     letter-spacing: 2px;
+}
+                
+.side-1 > li > a::before,
+.side-1 > li > a::after{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+}
+                
+.side-1 > li > a:hover{
+    color: #FFF;
+    -webkit-text-stroke: #000;
+    transition: 0.3s;
+}
+                
+    .side-1 > li > a:hover::before{
+    color: #F00;
+    -webkit-text-stroke: #000;
+    z-index: 1;
+    transform: translate(5px, -5px);
+}
+                
+    .side-1 > li > a:hover::after{
+    color: #0FF;
+    -webkit-text-stroke: #000;
+    z-index: 2;
+    transform: translate(10px, -10px);
+}
+</xmp>
+
+</div>            
+
+
+        </div>
+    </div>
+
     <section class="sidebar-1">
         
         <ul class="side-1">
@@ -35,7 +133,116 @@
         </ul>
     </section>
 
-    <h2>SIDEBAR STYLE 2</h2>
+    <div class="sidebar-2-head">
+        <h2>SIDEBAR STYLE 2</h2>
+        <button class="sidebar-2-btn">Get Code!</button>
+    </div>
+
+    <div class="sidebar-2-code-popup">
+        <div class="html">
+            <p> HTML <span><button class="copyBtnHTML" data-clipboard-target="#copy-html-text-2"><i class="fa fa-clipboard"></i></button></span></p>
+            <span class="alertHTML">Copied</span>
+
+            <div id="copy-html-text-2">
+<xmp>
+<section class="sidebar-2">        
+    <ul class="side-2">
+        <li><a href="#" data-text="HOME">HOME</a></li>
+        <li><a href="#" data-text="ABOUT">ABOUT</a></li>
+        <li><a href="#" data-text="SERVICES">SERVICES</a></li>
+        <li><a href="#" data-text="PORTFOLIO">PORTFOLIO</a></li>
+        <li><a href="#" data-text="TEAM">TEAM</a></li>
+        <li><a href="#" data-text="CONTACT">CONTACT</a></li>
+    </ul>
+</section> 
+</xmp>
+            </div>
+        </div>
+
+        <div class="css">
+            <p>CSS <span><button class="copyBtnCSS" data-clipboard-target="#copy-css-text-2"><i class="fa fa-clipboard"></i></button></span></p>
+            <span class="alertCSS">Copied</span>
+
+            <div id="copy-css-text-2">
+<xmp>
+.sidebar-2{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+}
+    
+.sidebar-2 > .side-2 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+    
+.sidebar-2 > .side-2 > li{
+    list-style: none;
+}
+    
+.sidebar-2 > .side-2 > li > a{
+    font-size: 3em;
+    letter-spacing: 2px;
+    line-height: 1.2em;
+    position: relative;
+    padding: 0px 10px;
+    text-decoration: none;
+    font-weight: 900;
+    color: transparent;
+}
+    
+.sidebar-2 > .side-2 > li > a:hover{
+    color: transparent;
+}
+    
+.sidebar-2 > .side-2 > li > a::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    -webkit-text-stroke: 1px #EEE;
+    transform: translateX(0);
+    transition: 0.5s;
+    color: transparent;
+}
+    
+.sidebar-2 > .side-2 > li > a:hover::before{
+    transform: translateX(100%);
+    opacity: 0;
+}
+    
+.sidebar-2 > .side-2 > li > a::after{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    -webkit-text-stroke: 1px #EEE;
+    transform: translateX(-100%);
+    transition: 0.5s;
+    opacity: 0;
+    color: #03F4F2;
+}
+    
+.sidebar-2 > .side-2 > li > a:hover::after{
+    transform: translateX(0);
+    opacity: 1;
+}
+</xmp>                
+            </div>
+
+        </div>
+    </div>
+
     <section class="sidebar-2">
         
         <ul class="side-2">
@@ -48,5 +255,8 @@
         </ul>
     </section>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
